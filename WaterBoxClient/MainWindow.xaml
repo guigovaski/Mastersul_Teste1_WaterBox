@@ -1,0 +1,33 @@
+﻿<Window x:Class="WaterBoxClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WaterBoxClient"
+        mc:Ignorable="d"
+        Background="AliceBlue"
+        Title="Water Box Application" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="97*"/>
+            <ColumnDefinition Width="703*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock HorizontalAlignment="Left" Margin="46,13,0,0" TextWrapping="Wrap" Text="Status" TextAlignment="Center" VerticalAlignment="Top" Height="25" Width="200" FontSize="22" Grid.ColumnSpan="2"/>
+        <ComboBox x:Name="cbxS1" HorizontalAlignment="Left" Margin="303,47,0,0" VerticalAlignment="Top" Width="150" Grid.Column="1"/>
+        <ComboBox x:Name="cbxS2" HorizontalAlignment="Left" Margin="303,87,0,0" VerticalAlignment="Top" Width="150" Grid.Column="1"/>
+        <ComboBox x:Name="cbxS3" HorizontalAlignment="Left" Margin="303,127,0,0" VerticalAlignment="Top" Width="150" Grid.Column="1"/>
+        <ComboBox x:Name="cbxS4" HorizontalAlignment="Left" Margin="303,167,0,0" VerticalAlignment="Top" Width="150" Grid.Column="1"/>
+        <ListView x:Name="listView" Margin="10,47,500,33" FontSize="14" Grid.ColumnSpan="2">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <TextBlock HorizontalAlignment="Left" Margin="260,50,0,0" TextWrapping="Wrap" Text="S1" VerticalAlignment="Top" Grid.Column="1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="260,90,0,0" TextWrapping="Wrap" Text="S2" VerticalAlignment="Top" Grid.Column="1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="260,130,0,0" TextWrapping="Wrap" Text="S3" VerticalAlignment="Top" Grid.Column="1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="260,170,0,0" TextWrapping="Wrap" Text="S4" VerticalAlignment="Top" Grid.Column="1"/>
+        <Button x:Name="btnSend" Click="btnSend_Click" Content="Send" HorizontalAlignment="Left" Margin="333,217,0,0" VerticalAlignment="Top" Width="90" Grid.Column="1" UseLayoutRounding="False"/>
+    </Grid>
+</Window>
